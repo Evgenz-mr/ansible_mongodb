@@ -1,0 +1,232 @@
+---
+- name: Connect to my server
+  hosts: Linux1
+  become: yes
+
+  vars:
+    mongo_src:
+    - mongodb-linux-x86_64-rhel62-3.4.1
+    - mongodb-linux-x86_64-rhel70-3.4.1
+    - mongodb-linux-x86_64-rhel55-3.2.11
+
+    - mongodb-linux-x86_64-ubuntu1604-4.0.10
+    - mongodb-linux-x86_64-ubuntu1804-4.1.12
+    - mongodb-linux-x86_64-ubuntu1804-4.1.13
+
+    - mongodb-linux-x86_64-debian92-4.0.10
+    - mongodb-linux-x86_64-debian92-4.1.12
+    - mongodb-linux-x86_64-debian92-4.1.13
+
+
+
+
+  tasks:
+  - name: Check and Print LINUX Version
+    debug: var=ansible_os_family
+
+  - block:   # ========================Block for REDHAT====================================
+ 
+      - name: Download Mongodb(162) 3.4.1 for RedHat
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.1.tgz dest=/opt/mongodb-linux-x86_64-rhel62-3.4.1.tgz 
+        when: ansible_os_family == "RedHat"
+
+      - name: Create directory mongodb_162-3.4.1
+        file:
+          path=/opt/mongodb_162-3.4.1
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+
+      - name: Extract archive mongodb_162-3.4.1
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-rhel62-3.4.1.tgz
+          dest: /opt/mongodb_162-3.4.1
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+
+
+
+      - name: Download Mongodb(170) 3.4.1 for RedHat
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-rhel70-3.4.1.tgz dest=/opt/mongodb-linux-x86_64-rhel70-3.4.1.tgz
+        when: ansible_os_family == "RedHat"
+
+      - name: Create directory mongodb_170-3.4.1
+        file:
+          path=/opt/mongodb_170-3.4.1
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+
+      - name: Extract archive mongodb_170-3.4.1
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-rhel70-3.4.1.tgz
+          dest: /opt/mongodb_170-3.4.1
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+
+
+
+      - name: Download Mongodb(155) 3.2.11 for RedHat
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-rhel55-3.2.11.tgz dest=/opt/mongodb-linux-x86_64-rhel55-3.2.11.tgz
+        when: ansible_os_family == "RedHat"
+
+      - name: Create directory mongodb-3.2.11
+        file:
+          path=/opt/mongodb-3.2.11
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+
+      - name: Extract archive mongodb-3.2.11
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-rhel55-3.2.11.tgz
+          dest: /opt/mongodb-3.2.11
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+
+
+
+
+  - block:   # =========================Block for Ubuntu===============================
+      
+      - name: Download Mongodb 4.0.10 for Ubuntu
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-arm64-ubuntu1604-4.0.10.tgz dest=/opt/mongodb-linux-arm64-ubuntu1604-4.0.10.tgz
+        when: ansible_os_family == "Ubuntu"
+
+      - name: Create directory mongodb-4.0.10
+        file:
+          path=/opt/mongodb-4.0.10
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Ubuntu"       
+ 
+      - name: Extract archive mongodb-4.0.10
+        unarchive:
+          src: /opt/mongodb-linux-arm64-ubuntu1604-4.0.10.tgz
+          dest: /opt/mongodb-4.0.11
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Ubuntu"
+
+
+
+      - name: Download Mongodb 4.1.12 for Ubuntu
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-aarch64-ubuntu1804-4.1.12.tgz dest=/opt/mongodb-linux-aarch64-ubuntu1804-4.1.12.tgz
+        when: ansible_os_family == "Ubuntu"
+     
+      - name: Create directory mongodb-4.1.12
+        file:
+          path=/opt/mongodb-4.1.12
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Ubuntu"
+
+
+
+      - name: Extract archive mongodb-4.1.12
+        unarchive:
+          src: /opt/mongodb-linux-aarch64-ubuntu1804-4.1.12.tgz
+          dest: /opt/mongodb-4.1.12
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Ubuntu"
+
+
+      - name: Download Mongodb 4.1.13 for Ubuntu
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.1.13.tgz dest=/opt/mongodb-linux-x86_64-ubuntu1804-4.1.13.tgz
+        when: ansible_os_family == "Ubuntu"
+        
+      - name: Create directory mongodb-4.1.13
+        file:
+          path=/opt/mongodb-4.1.13
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Ubuntu"
+
+      - name: Extract archive mongodb-4.1.13
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-ubuntu1804-4.1.13.tgz
+          dest: /opt/mongodb-4.1.13
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Ubuntu"
+
+
+
+  - block:   # =============================Block for Debian=====================================
+
+      - name: Download Mongodb 4.0.10 for Debian
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-debian92-4.0.10.tgz dest=/opt/mongodb-linux-x86_64-debian92-4.0.10.tgz
+        when: ansible_os_family == "Debian"
+
+      - name: Create directory mongodb-4.0.10
+        file:
+          path=/opt/mongodb-4.0.10
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Debian"
+
+      - name: Extract archive mongodb-4.0.10
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-debian92-4.0.10.tgz
+          dest: /opt/mongodb-4.0.10
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Debian"
+
+
+
+      - name: Download Mongodb 4.1.12 for Debian
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-debian92-4.1.12.tgz dest=/opt/mongodb-linux-x86_64-debian92-4.1.12.tgz
+        when: ansible_os_family == "Debian"
+ 
+      - name: Create directory mongodb-4.1.12
+        file:
+          path=/opt/mongodb-4.1.12
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Debian"
+
+      - name: Extract archive mongodb-4.1.12
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-debian92-4.1.12.tgz
+          dest: /opt/mongodb-4.1.12
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Debian"
+
+
+
+      - name: Download Mongodb(155) 4.1.13 for Debian
+        get_url: url=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-debian92-4.1.13.tgz dest=/opt/mongodb-linux-x86_64-debian92-4.1.13.tgz
+        when: ansible_os_family == "Debian"
+
+      - name: Create directory mongodb-4.1.13
+        file:
+          path=/opt/mongodb-4.1.13
+          mode=0755
+          owner=root
+          group=root
+          state=directory
+        when: ansible_os_family == "Debian"
+
+      - name: Extract archive mongodb-4.1.12
+        unarchive:
+          src: /opt/mongodb-linux-x86_64-debian92-4.1.13.tgz
+          dest: /opt/mongodb-4.1.13
+          remote_src: yes
+          extra_opts: [--strip-components=1]
+        when: ansible_os_family == "Debian" 

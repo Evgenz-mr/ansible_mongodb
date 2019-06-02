@@ -1,0 +1,570 @@
+2019-05-28 21:21:50,524 p=9343 u=root |  - mongodb was created successfully
+2019-05-29 22:33:32,512 p=8395 u=root |  PLAY [Connect to my server] ******************************************************************************
+2019-05-29 22:33:32,567 p=8395 u=root |  TASK [Gathering Facts] ***********************************************************************************
+2019-05-29 22:33:36,192 p=8395 u=root |  ok: [Linux1]
+2019-05-29 22:33:36,273 p=8395 u=root |  TASK [Download Mongodb] **********************************************************************************
+2019-05-29 22:33:39,129 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:41,041 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:42,989 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:44,891 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.2.17) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.2.17", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:46,852 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.0.14) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel55-3.0.14", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:48,771 p=8395 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.0.14) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.0.14", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:33:48,783 p=8395 u=root |  PLAY RECAP ***********************************************************************************************
+2019-05-29 22:33:48,784 p=8395 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-05-29 22:34:17,929 p=8476 u=root |  ansible-playbook 2.8.0
+  config file = /root/cm/ansible/day-4/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  9 2019, 14:30:50) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-05-29 22:34:17,929 p=8476 u=root |  Using /root/cm/ansible/day-4/ansible.cfg as config file
+2019-05-29 22:34:18,823 p=8476 u=root |  PLAYBOOK: mongodb.yml ************************************************************************************
+2019-05-29 22:34:18,825 p=8476 u=root |  1 plays in mongodb.yml
+2019-05-29 22:34:18,903 p=8476 u=root |  PLAY [Connect to my server] ******************************************************************************
+2019-05-29 22:34:18,921 p=8476 u=root |  TASK [Gathering Facts] ***********************************************************************************
+2019-05-29 22:34:18,921 p=8476 u=root |  task path: /root/cm/ansible/day-4/mongodb.yml:2
+2019-05-29 22:34:21,420 p=8476 u=root |  ok: [Linux1] => {"ansible_facts": {"ansible_all_ipv4_addresses": ["192.168.145.157"], "ansible_all_ipv6_addresses": ["fe80::d80:1e09:9543:cc3"], "ansible_apparmor": {"status": "disabled"}, "ansible_architecture": "x86_64", "ansible_bios_date": "12/01/2006", "ansible_bios_version": "VirtualBox", "ansible_cmdline": {"BOOT_IMAGE": "/vmlinuz-3.10.0-957.12.2.el7.x86_64", "LANG": "en_US.UTF-8", "crashkernel": "auto", "quiet": true, "rd.lvm.lv": "centos_ansible/swap", "rhgb": true, "ro": true, "root": "/dev/mapper/centos_ansible-root"}, "ansible_date_time": {"date": "2019-05-29", "day": "29", "epoch": "1559158461", "hour": "22", "iso8601": "2019-05-29T19:34:21Z", "iso8601_basic": "20190529T223421226682", "iso8601_basic_short": "20190529T223421", "iso8601_micro": "2019-05-29T19:34:21.226856Z", "minute": "34", "month": "05", "second": "21", "time": "22:34:21", "tz": "MSK", "tz_offset": "+0300", "weekday": "Wednesday", "weekday_number": "3", "weeknumber": "21", "year": "2019"}, "ansible_default_ipv4": {"address": "192.168.145.157", "alias": "enp0s3", "broadcast": "192.168.145.255", "gateway": "192.168.145.254", "interface": "enp0s3", "macaddress": "08:00:27:2e:67:23", "mtu": 1500, "netmask": "255.255.255.0", "network": "192.168.145.0", "type": "ether"}, "ansible_default_ipv6": {}, "ansible_device_links": {"ids": {"dm-0": ["dm-name-centos_ansible-root", "dm-uuid-LVM-FdHpjaiAeWhNmKZ9MsLQSkL1p1lvMUiBjIVuXGETz1KcLfQn0IqlC8S8MT0SAop7"], "dm-1": ["dm-name-centos_ansible-swap", "dm-uuid-LVM-FdHpjaiAeWhNmKZ9MsLQSkL1p1lvMUiBk9VWJyC9NH3PIAf5oqdE3Dz0cVs15eW2"], "sda": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699"], "sda1": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699-part1"], "sda2": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699-part2", "lvm-pv-uuid-ERdXB8-tFkZ-9Gce-n5WZ-UYkL-sv0d-0Y2trt"], "sr0": ["ata-VBOX_CD-ROM_VB2-01700376"]}, "labels": {}, "masters": {"sda2": ["dm-0", "dm-1"]}, "uuids": {"dm-0": ["c78e19d3-1241-4a5a-b084-46791dd66c24"], "dm-1": ["185716b1-651f-4ac1-b34e-73abf0920f6d"], "sda1": ["46928582-21a2-4556-a9cb-727b0851c00a"]}}, "ansible_devices": {"dm-0": {"holders": [], "host": "", "links": {"ids": ["dm-name-centos_ansible-root", "dm-uuid-LVM-FdHpjaiAeWhNmKZ9MsLQSkL1p1lvMUiBjIVuXGETz1KcLfQn0IqlC8S8MT0SAop7"], "labels": [], "masters": [], "uuids": ["c78e19d3-1241-4a5a-b084-46791dd66c24"]}, "model": null, "partitions": {}, "removable": "0", "rotational": "1", "sas_address": null, "sas_device_handle": null, "scheduler_mode": "", "sectors": "27344896", "sectorsize": "512", "serial": "VB8fc70899", "size": "13.04 GB", "support_discard": "0", "vendor": null, "virtual": 1}, "dm-1": {"holders": [], "host": "", "links": {"ids": ["dm-name-centos_ansible-swap", "dm-uuid-LVM-FdHpjaiAeWhNmKZ9MsLQSkL1p1lvMUiBk9VWJyC9NH3PIAf5oqdE3Dz0cVs15eW2"], "labels": [], "masters": [], "uuids": ["185716b1-651f-4ac1-b34e-73abf0920f6d"]}, "model": null, "partitions": {}, "removable": "0", "rotational": "1", "sas_address": null, "sas_device_handle": null, "scheduler_mode": "", "sectors": "3276800", "sectorsize": "512", "serial": "VB8fc70899", "size": "1.56 GB", "support_discard": "0", "vendor": null, "virtual": 1}, "sda": {"holders": [], "host": "", "links": {"ids": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699"], "labels": [], "masters": [], "uuids": []}, "model": "VBOX HARDDISK", "partitions": {"sda1": {"holders": [], "links": {"ids": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699-part1"], "labels": [], "masters": [], "uuids": ["46928582-21a2-4556-a9cb-727b0851c00a"]}, "sectors": "2097152", "sectorsize": 512, "size": "1.00 GB", "start": "2048", "uuid": "46928582-21a2-4556-a9cb-727b0851c00a"}, "sda2": {"holders": ["centos_ansible-root", "centos_ansible-swap"], "links": {"ids": ["ata-VBOX_HARDDISK_VB8fc70899-478d5699-part2", "lvm-pv-uuid-ERdXB8-tFkZ-9Gce-n5WZ-UYkL-sv0d-0Y2trt"], "labels": [], "masters": ["dm-0", "dm-1"], "uuids": []}, "sectors": "30627840", "sectorsize": 512, "size": "14.60 GB", "start": "2099200", "uuid": null}}, "removable": "0", "rotational": "1", "sas_address": null, "sas_device_handle": null, "scheduler_mode": "deadline", "sectors": "32727712", "sectorsize": "512", "serial": "VB8fc70899", "size": "15.61 GB", "support_discard": "0", "vendor": "ATA", "virtual": 1}, "sr0": {"holders": [], "host": "", "links": {"ids": ["ata-VBOX_CD-ROM_VB2-01700376"], "labels": [], "masters": [], "uuids": []}, "model": "CD-ROM", "partitions": {}, "removable": "1", "rotational": "1", "sas_address": null, "sas_device_handle": null, "scheduler_mode": "deadline", "sectors": "2097151", "sectorsize": "512", "size": "1024.00 MB", "support_discard": "0", "vendor": "VBOX", "virtual": 1}}, "ansible_distribution": "CentOS", "ansible_distribution_file_parsed": true, "ansible_distribution_file_path": "/etc/redhat-release", "ansible_distribution_file_variety": "RedHat", "ansible_distribution_major_version": "7", "ansible_distribution_release": "Core", "ansible_distribution_version": "7", "ansible_dns": {"nameservers": ["192.168.145.254"]}, "ansible_domain": "", "ansible_effective_group_id": 0, "ansible_effective_user_id": 0, "ansible_enp0s3": {"active": true, "device": "enp0s3", "features": {"busy_poll": "off [fixed]", "fcoe_mtu": "off [fixed]", "generic_receive_offload": "on", "generic_segmentation_offload": "on", "highdma": "off [fixed]", "hw_tc_offload": "off [fixed]", "l2_fwd_offload": "off [fixed]", "large_receive_offload": "off [fixed]", "loopback": "off [fixed]", "netns_local": "off [fixed]", "ntuple_filters": "off [fixed]", "receive_hashing": "off [fixed]", "rx_all": "off", "rx_checksumming": "off", "rx_fcs": "off", "rx_gro_hw": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "rx_vlan_filter": "on [fixed]", "rx_vlan_offload": "on", "rx_vlan_stag_filter": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "scatter_gather": "on", "tcp_segmentation_offload": "on", "tx_checksum_fcoe_crc": "off [fixed]", "tx_checksum_ip_generic": "on", "tx_checksum_ipv4": "off [fixed]", "tx_checksum_ipv6": "off [fixed]", "tx_checksum_sctp": "off [fixed]", "tx_checksumming": "on", "tx_fcoe_segmentation": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_gre_segmentation": "off [fixed]", "tx_gso_partial": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "off [fixed]", "tx_lockless": "off [fixed]", "tx_nocache_copy": "off", "tx_scatter_gather": "on", "tx_scatter_gather_fraglist": "off [fixed]", "tx_sctp_segmentation": "off [fixed]", "tx_sit_segmentation": "off [fixed]", "tx_tcp6_segmentation": "off [fixed]", "tx_tcp_ecn_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_tcp_segmentation": "on", "tx_udp_tnl_csum_segmentation": "off [fixed]", "tx_udp_tnl_segmentation": "off [fixed]", "tx_vlan_offload": "on [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "udp_fragmentation_offload": "off [fixed]", "vlan_challenged": "off [fixed]"}, "hw_timestamp_filters": [], "ipv4": {"address": "192.168.145.157", "broadcast": "192.168.145.255", "netmask": "255.255.255.0", "network": "192.168.145.0"}, "ipv6": [{"address": "fe80::d80:1e09:9543:cc3", "prefix": "64", "scope": "link"}], "macaddress": "08:00:27:2e:67:23", "module": "e1000", "mtu": 1500, "pciid": "0000:00:03.0", "promisc": false, "speed": 1000, "timestamping": ["tx_software", "rx_software", "software"], "type": "ether"}, "ansible_env": {"HOME": "/root", "JAVA_HOME": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64", "LANG": "en_US.UTF-8", "LESSOPEN": "||/usr/bin/lesspipe.sh %s", "LOGNAME": "root", "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", "MAIL": "/var/mail/root", "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin", "PWD": "/root", "SELINUX_LEVEL_REQUESTED": "", "SELINUX_ROLE_REQUESTED": "", "SELINUX_USE_CURRENT_RANGE": "", "SHELL": "/bin/bash", "SHLVL": "2", "SSH_CLIENT": "192.168.145.158 60338 22", "SSH_CONNECTION": "192.168.145.158 60338 192.168.145.157 22", "SSH_TTY": "/dev/pts/1", "TERM": "xterm", "USER": "root", "XDG_RUNTIME_DIR": "/run/user/0", "XDG_SESSION_ID": "3", "_": "/usr/bin/python"}, "ansible_fibre_channel_wwn": [], "ansible_fips": false, "ansible_form_factor": "Other", "ansible_fqdn": "ansible", "ansible_hostname": "ansible", "ansible_hostnqn": "", "ansible_interfaces": ["lo", "enp0s3"], "ansible_is_chroot": false, "ansible_iscsi_iqn": "", "ansible_kernel": "3.10.0-957.12.2.el7.x86_64", "ansible_lo": {"active": true, "device": "lo", "features": {"busy_poll": "off [fixed]", "fcoe_mtu": "off [fixed]", "generic_receive_offload": "on", "generic_segmentation_offload": "on", "highdma": "on [fixed]", "hw_tc_offload": "off [fixed]", "l2_fwd_offload": "off [fixed]", "large_receive_offload": "off [fixed]", "loopback": "on [fixed]", "netns_local": "on [fixed]", "ntuple_filters": "off [fixed]", "receive_hashing": "off [fixed]", "rx_all": "off [fixed]", "rx_checksumming": "on [fixed]", "rx_fcs": "off [fixed]", "rx_gro_hw": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "rx_vlan_filter": "off [fixed]", "rx_vlan_offload": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "scatter_gather": "on", "tcp_segmentation_offload": "on", "tx_checksum_fcoe_crc": "off [fixed]", "tx_checksum_ip_generic": "on [fixed]", "tx_checksum_ipv4": "off [fixed]", "tx_checksum_ipv6": "off [fixed]", "tx_checksum_sctp": "on [fixed]", "tx_checksumming": "on", "tx_fcoe_segmentation": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_gre_segmentation": "off [fixed]", "tx_gso_partial": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "off [fixed]", "tx_lockless": "on [fixed]", "tx_nocache_copy": "off [fixed]", "tx_scatter_gather": "on [fixed]", "tx_scatter_gather_fraglist": "on [fixed]", "tx_sctp_segmentation": "on", "tx_sit_segmentation": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_tcp_ecn_segmentation": "on", "tx_tcp_mangleid_segmentation": "on", "tx_tcp_segmentation": "on", "tx_udp_tnl_csum_segmentation": "off [fixed]", "tx_udp_tnl_segmentation": "off [fixed]", "tx_vlan_offload": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "udp_fragmentation_offload": "on", "vlan_challenged": "on [fixed]"}, "hw_timestamp_filters": [], "ipv4": {"address": "127.0.0.1", "broadcast": "host", "netmask": "255.0.0.0", "network": "127.0.0.0"}, "ipv6": [{"address": "::1", "prefix": "128", "scope": "host"}], "mtu": 65536, "promisc": false, "timestamping": ["rx_software", "software"], "type": "loopback"}, "ansible_local": {}, "ansible_lsb": {}, "ansible_lvm": {"lvs": {"root": {"size_g": "13.04", "vg": "centos_ansible"}, "swap": {"size_g": "1.56", "vg": "centos_ansible"}}, "pvs": {"/dev/sda2": {"free_g": "0", "size_g": "14.60", "vg": "centos_ansible"}}, "vgs": {"centos_ansible": {"free_g": "0", "num_lvs": "2", "num_pvs": "1", "size_g": "14.60"}}}, "ansible_machine": "x86_64", "ansible_machine_id": "087a5ed49bd4469aa2feb99f487326d6", "ansible_memfree_mb": 384, "ansible_memory_mb": {"nocache": {"free": 694, "used": 297}, "real": {"free": 384, "total": 991, "used": 607}, "swap": {"cached": 0, "free": 1599, "total": 1599, "used": 0}}, "ansible_memtotal_mb": 991, "ansible_mounts": [{"block_available": 217992, "block_size": 4096, "block_total": 259584, "block_used": 41592, "device": "/dev/sda1", "fstype": "xfs", "inode_available": 523956, "inode_total": 524288, "inode_used": 332, "mount": "/boot", "options": "rw,seclabel,relatime,attr2,inode64,noquota", "size_available": 892895232, "size_total": 1063256064, "uuid": "46928582-21a2-4556-a9cb-727b0851c00a"}, {"block_available": 2796488, "block_size": 4096, "block_total": 3415552, "block_used": 619064, "device": "/dev/mapper/centos_ansible-root", "fstype": "xfs", "inode_available": 6760895, "inode_total": 6836224, "inode_used": 75329, "mount": "/", "options": "rw,seclabel,relatime,attr2,inode64,noquota", "size_available": 11454414848, "size_total": 13990100992, "uuid": "c78e19d3-1241-4a5a-b084-46791dd66c24"}], "ansible_nodename": "ansible", "ansible_os_family": "RedHat", "ansible_pkg_mgr": "yum", "ansible_proc_cmdline": {"BOOT_IMAGE": "/vmlinuz-3.10.0-957.12.2.el7.x86_64", "LANG": "en_US.UTF-8", "crashkernel": "auto", "quiet": true, "rd.lvm.lv": ["centos_ansible/root", "centos_ansible/swap"], "rhgb": true, "ro": true, "root": "/dev/mapper/centos_ansible-root"}, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM) i7-4771 CPU @ 3.50GHz"], "ansible_processor_cores": 1, "ansible_processor_count": 1, "ansible_processor_threads_per_core": 1, "ansible_processor_vcpus": 1, "ansible_product_name": "VirtualBox", "ansible_product_serial": "0", "ansible_product_uuid": "2E1B48F5-0AAD-4529-9E29-A60A698BF043", "ansible_product_version": "1.2", "ansible_python": {"executable": "/usr/bin/python", "has_sslcontext": true, "type": "CPython", "version": {"major": 2, "micro": 5, "minor": 7, "releaselevel": "final", "serial": 0}, "version_info": [2, 7, 5, "final", 0]}, "ansible_python_version": "2.7.5", "ansible_real_group_id": 0, "ansible_real_user_id": 0, "ansible_selinux": {"config_mode": "enforcing", "mode": "enforcing", "policyvers": 31, "status": "enabled", "type": "targeted"}, "ansible_selinux_python_present": true, "ansible_service_mgr": "systemd", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPQb9vOKUwVTmoov3w3O7FVUBVw4/N39BUSvXra9H0S3Ck8kFFqVPVHxL0MH6ybKW3QC72P328AFIh1bySrURwc=", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIHWiOYPl7jUx0zQgZgwb1ff+3AjM+YUzWiEQU0/OiUAy", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDEDoIuSZTd9IvSC2I4VarLXSwPsWkpd/IoON5ANZ1eaO86tg99vPFtfEx4z78x4Vx5yqcSTbumhaTJ/eXwiInFNHd3/I+UdNt7DDrN3zvA85wFbJmMRITsGFasWg9zibKTNqcCUWpO7XE2saO3JnnuBTS22iZVEFmOlXKfPYM8RANElzK2b7W7+l0qQuwGJ9tFSBnopCTsqBCrau5WIg3mtXxKi2F+JZqokbeA69JeKXMWk0YionFOx2jq108PzP/WhzdwPYw0kLk5uJ4p949OeglfiGhWMoDgKQ8nu6iJF/eVslsDtPIPtN+1MMYnJ3Vd1Ey6ea98kUIIo/krksM7", "ansible_swapfree_mb": 1599, "ansible_swaptotal_mb": 1599, "ansible_system": "Linux", "ansible_system_capabilities": ["cap_chown", "cap_dac_override", "cap_dac_read_search", "cap_fowner", "cap_fsetid", "cap_kill", "cap_setgid", "cap_setuid", "cap_setpcap", "cap_linux_immutable", "cap_net_bind_service", "cap_net_broadcast", "cap_net_admin", "cap_net_raw", "cap_ipc_lock", "cap_ipc_owner", "cap_sys_module", "cap_sys_rawio", "cap_sys_chroot", "cap_sys_ptrace", "cap_sys_pacct", "cap_sys_admin", "cap_sys_boot", "cap_sys_nice", "cap_sys_resource", "cap_sys_time", "cap_sys_tty_config", "cap_mknod", "cap_lease", "cap_audit_write", "cap_audit_control", "cap_setfcap", "cap_mac_override", "cap_mac_admin", "cap_syslog", "35", "36+ep"], "ansible_system_capabilities_enforced": "True", "ansible_system_vendor": "innotek GmbH", "ansible_uptime_seconds": 1144, "ansible_user_dir": "/root", "ansible_user_gecos": "root", "ansible_user_gid": 0, "ansible_user_id": "root", "ansible_user_shell": "/bin/bash", "ansible_user_uid": 0, "ansible_userspace_architecture": "x86_64", "ansible_userspace_bits": "64", "ansible_virtualization_role": "guest", "ansible_virtualization_type": "virtualbox", "discovered_interpreter_python": "/usr/bin/python", "gather_subset": ["all"], "module_setup": true}, "changed": false}
+2019-05-29 22:34:21,421 p=8476 u=root |  META: ran handlers
+2019-05-29 22:34:21,492 p=8476 u=root |  TASK [Download Mongodb] **********************************************************************************
+2019-05-29 22:34:21,492 p=8476 u=root |  task path: /root/cm/ansible/day-4/mongodb.yml:17
+2019-05-29 22:34:24,207 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:26,171 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:28,072 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:29,990 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.2.17) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.2.17", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:31,909 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.0.14) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel55-3.0.14", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:33,844 p=8476 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.0.14) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/$\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.0.14", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/$\"{ item }\""}
+2019-05-29 22:34:33,857 p=8476 u=root |  PLAY RECAP ***********************************************************************************************
+2019-05-29 22:34:33,858 p=8476 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 19:26:45,675 p=8796 u=root |  ERROR! Missing target hosts
+2019-06-02 19:26:52,949 p=8803 u=root |  ERROR! Missing target hosts
+2019-06-02 19:30:15,914 p=9004 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 19:30:15,980 p=9004 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 19:30:20,392 p=9004 u=root |  ok: [Linux1]
+2019-06-02 19:30:20,469 p=9004 u=root |  TASK [Download Mongodb] *************************************************************************************************************
+2019-06-02 19:30:23,599 p=9004 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/\"{ item }\""}
+2019-06-02 19:30:25,526 p=9004 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/\"{ item }\""}
+2019-06-02 19:30:27,488 p=9004 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/\"{ item }\""}
+2019-06-02 19:30:29,397 p=9004 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.2.17) => {"ansible_loop_var": "item", "changed": false, "dest": "/opt/\"{ item }\"", "elapsed": 1, "item": "mongodb-linux-x86_64-rhel70-3.2.17", "msg": "Request failed", "response": "HTTP Error 400: Bad Request", "status_code": 400, "url": "https://www.mongodb.org/dl/linux/\"{ item }\""}
+2019-06-02 19:30:29,664 p=9004 u=root |   [ERROR]: User interrupted execution
+
+2019-06-02 20:14:17,764 p=9523 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:14:17,784 p=9523 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:14:21,022 p=9523 u=root |  ok: [Linux1]
+2019-06-02 20:14:21,098 p=9523 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:14:22,492 p=9523 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 20:14:23,138 p=9523 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 20:14:23,803 p=9523 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: { items }"}
+2019-06-02 20:14:23,811 p=9523 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:14:23,812 p=9523 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:19:58,150 p=9602 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:19:58,170 p=9602 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:20:01,478 p=9602 u=root |  ok: [Linux1]
+2019-06-02 20:20:01,556 p=9602 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:20:03,089 p=9602 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:20:03,821 p=9602 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:20:04,498 p=9602 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:20:04,510 p=9602 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:20:04,510 p=9602 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:20:56,130 p=9668 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:20:56,151 p=9668 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:20:58,886 p=9668 u=root |  ok: [Linux1]
+2019-06-02 20:20:58,964 p=9668 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:21:00,416 p=9668 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:21:01,093 p=9668 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:21:01,786 p=9668 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: {item.url}"}
+2019-06-02 20:21:01,799 p=9668 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:21:01,799 p=9668 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:26:03,766 p=9758 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:26:03,786 p=9758 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:26:07,000 p=9758 u=root |  ok: [Linux1]
+2019-06-02 20:26:07,077 p=9758 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:26:08,497 p=9758 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 20:26:09,158 p=9758 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 20:26:09,787 p=9758 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: { items }"}
+2019-06-02 20:26:09,797 p=9758 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:26:09,798 p=9758 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:29:43,626 p=9823 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:29:43,646 p=9823 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:29:46,854 p=9823 u=root |  ok: [Linux1]
+2019-06-02 20:29:46,934 p=9823 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:29:48,346 p=9823 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: { mongodb-linux-x86_64-rhel62-3.4.1 }"}
+2019-06-02 20:29:49,003 p=9823 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: { mongodb-linux-x86_64-rhel62-3.4.1 }"}
+2019-06-02 20:29:49,646 p=9823 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: { mongodb-linux-x86_64-rhel62-3.4.1 }"}
+2019-06-02 20:29:49,656 p=9823 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:29:49,656 p=9823 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:30:48,542 p=9889 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:30:48,563 p=9889 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:30:51,243 p=9889 u=root |  ok: [Linux1]
+2019-06-02 20:30:51,332 p=9889 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:30:52,730 p=9889 u=root |  fatal: [Linux1]: FAILED! => {"changed": false, "msg": "unknown url type: { mongodb-linux-x86_64-rhel62-3.4.1 }"}
+2019-06-02 20:30:52,731 p=9889 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:30:52,732 p=9889 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:32:39,899 p=9922 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:32:39,918 p=9922 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:32:43,143 p=9922 u=root |  ok: [Linux1]
+2019-06-02 20:32:43,221 p=9922 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:32:44,621 p=9922 u=root |  fatal: [Linux1]: FAILED! => {"changed": false, "msg": "unknown url type: mongodb-linux-x86_64-rhel62-3.4.1"}
+2019-06-02 20:32:44,623 p=9922 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:32:44,623 p=9922 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:35:45,310 p=9984 u=root |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: url="{{ mongodb-linux-x86_64-rhel62-3.4.1 }} dest=/opt/
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 22, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Download Ansible for rhel
+    ^ here
+
+2019-06-02 20:37:04,830 p=9994 u=root |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: url="{{ mongodb-linux-x86_64-rhel62-3.4.1 }} dest=/opt/
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Download Ansible for rhel
+    ^ here
+
+2019-06-02 20:39:46,666 p=10020 u=root |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: url="{{ mongodb-linux-x86_64-rhel62-3.4.1 }} dest=/opt/mongodb-linux-x86_64-rhel62-3.4.1.tgz
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Download Ansible for rhel
+    ^ here
+
+2019-06-02 20:40:55,022 p=10049 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:40:55,041 p=10049 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:40:58,313 p=10049 u=root |  ok: [Linux1]
+2019-06-02 20:40:58,390 p=10049 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:40:58,425 p=10049 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for rhel\n    ^ here\n"}
+2019-06-02 20:40:58,427 p=10049 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:40:58,427 p=10049 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:43:06,486 p=10078 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:43:06,506 p=10078 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:43:09,716 p=10078 u=root |  ok: [Linux1]
+2019-06-02 20:43:09,793 p=10078 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:43:09,820 p=10078 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for rhel\n    ^ here\n"}
+2019-06-02 20:43:09,822 p=10078 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:43:09,822 p=10078 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:45:35,053 p=10135 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:45:35,072 p=10135 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:45:38,302 p=10135 u=root |  ok: [Linux1]
+2019-06-02 20:45:38,379 p=10135 u=root |  TASK [Download Ansible for rhel] ****************************************************************************************************
+2019-06-02 20:45:38,414 p=10135 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for rhel\n    ^ here\n"}
+2019-06-02 20:45:38,416 p=10135 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:45:38,416 p=10135 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:51:14,309 p=10215 u=root |  PLAY [Connect to my server] *********************************************************************************************************
+2019-06-02 20:51:14,329 p=10215 u=root |  TASK [Gathering Facts] **************************************************************************************************************
+2019-06-02 20:51:17,538 p=10215 u=root |  ok: [Linux1]
+2019-06-02 20:51:17,615 p=10215 u=root |  TASK [Download Ansible for RedHat] **************************************************************************************************
+2019-06-02 20:51:17,651 p=10215 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for RedHat\n    ^ here\n"}
+2019-06-02 20:51:17,653 p=10215 u=root |  PLAY RECAP **************************************************************************************************************************
+2019-06-02 20:51:17,654 p=10215 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 20:55:29,184 p=10276 u=root |  ERROR! Invalid variable name in vars specified for Play: 'mongodb-linux-x86_64-rhel62-3.4.1' is not a valid variable name
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    mongodb-linux-x86_64-rhel62-3.4.1: http://downloads.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.1.tgz
+    ^ here
+
+2019-06-02 20:57:00,104 p=10287 u=root |  ERROR! Invalid variable name in vars specified for Play: 'mongodb-linux-x86_64-rhel62-3.4.1' is not a valid variable name
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    mongodb-linux-x86_64-rhel62-3.4.1: http://downloads.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.1.tgz
+    ^ here
+
+2019-06-02 21:09:08,122 p=10643 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:09:08,140 p=10643 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:09:11,584 p=10643 u=root |  ok: [Linux1]
+2019-06-02 21:09:11,655 p=10643 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:09:11,679 p=10643 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for RedHat\n    ^ here\n"}
+2019-06-02 21:09:11,681 p=10643 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:09:11,681 p=10643 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 21:09:58,594 p=10673 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:09:58,613 p=10673 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:10:01,079 p=10673 u=root |  ok: [Linux1]
+2019-06-02 21:10:01,150 p=10673 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:10:01,175 p=10673 u=root |  fatal: [Linux1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'mongodb' is undefined\n\nThe error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: Download Ansible for RedHat\n    ^ here\n"}
+2019-06-02 21:10:01,177 p=10673 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:10:01,177 p=10673 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 21:11:44,599 p=10725 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:11:44,617 p=10725 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:11:47,536 p=10725 u=root |  ok: [Linux1]
+2019-06-02 21:11:47,613 p=10725 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:11:58,205 p=10725 u=root |  changed: [Linux1]
+2019-06-02 21:11:58,208 p=10725 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:11:58,209 p=10725 u=root |  Linux1                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-02 21:13:36,893 p=10761 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:13:36,911 p=10761 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:13:39,825 p=10761 u=root |  ok: [Linux1]
+2019-06-02 21:13:39,895 p=10761 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:13:53,441 p=10761 u=root |  changed: [Linux1]
+2019-06-02 21:13:53,444 p=10761 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:13:53,444 p=10761 u=root |  Linux1                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-02 21:15:07,917 p=10821 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:15:07,935 p=10821 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:15:10,903 p=10821 u=root |  ok: [Linux1]
+2019-06-02 21:15:10,976 p=10821 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:15:12,256 p=10821 u=root |  ok: [Linux1]
+2019-06-02 21:15:12,325 p=10821 u=root |  TASK [Download Ansible for ubuntu] *******************************************************************************************************
+2019-06-02 21:15:12,379 p=10821 u=root |  skipping: [Linux1] => (item=mongodb-linux-x86_64-ubuntu1604-4.0.10) 
+2019-06-02 21:15:12,390 p=10821 u=root |  skipping: [Linux1] => (item=mongodb-linux-x86_64-ubuntu1804-4.1.12) 
+2019-06-02 21:15:12,391 p=10821 u=root |  skipping: [Linux1] => (item=mongodb-linux-x86_64-ubuntu1804-4.1.13) 
+2019-06-02 21:15:12,396 p=10821 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:15:12,396 p=10821 u=root |  Linux1                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-06-02 21:19:13,707 p=10874 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:19:13,725 p=10874 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:19:16,742 p=10874 u=root |  ok: [Linux1]
+2019-06-02 21:19:16,813 p=10874 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:19:18,116 p=10874 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel62-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel62-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 21:19:18,799 p=10874 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel70-3.4.1) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel70-3.4.1", "msg": "unknown url type: { items }"}
+2019-06-02 21:19:19,419 p=10874 u=root |  failed: [Linux1] (item=mongodb-linux-x86_64-rhel55-3.2.11) => {"ansible_loop_var": "item", "changed": false, "item": "mongodb-linux-x86_64-rhel55-3.2.11", "msg": "unknown url type: { items }"}
+2019-06-02 21:19:19,429 p=10874 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:19:19,429 p=10874 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 21:25:24,956 p=10982 u=root |   [WARNING]: While constructing a mapping from /root/cm/ansible/day-4/mongodb.yml, line 21, column 5, found a duplicate dict key
+(get_url). Using last defined value only.
+
+2019-06-02 21:25:25,524 p=10982 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:25:25,542 p=10982 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:25:28,582 p=10982 u=root |  ok: [Linux1]
+2019-06-02 21:25:28,653 p=10982 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:25:39,912 p=10982 u=root |  changed: [Linux1]
+2019-06-02 21:25:39,982 p=10982 u=root |  TASK [Download Ansible for ubuntu] *******************************************************************************************************
+2019-06-02 21:25:40,008 p=10982 u=root |  skipping: [Linux1]
+2019-06-02 21:25:40,012 p=10982 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:25:40,012 p=10982 u=root |  Linux1                     : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-06-02 21:27:08,026 p=11019 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:27:08,044 p=11019 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:27:11,026 p=11019 u=root |  ok: [Linux1]
+2019-06-02 21:27:11,098 p=11019 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:27:28,826 p=11019 u=root |  changed: [Linux1]
+2019-06-02 21:27:28,898 p=11019 u=root |  TASK [Download Ansible for ubuntu] *******************************************************************************************************
+2019-06-02 21:27:28,924 p=11019 u=root |  skipping: [Linux1]
+2019-06-02 21:27:28,927 p=11019 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:27:28,928 p=11019 u=root |  Linux1                     : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-06-02 21:29:03,478 p=11070 u=root |  PLAY [Connect to my server] **************************************************************************************************************
+2019-06-02 21:29:03,497 p=11070 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-06-02 21:29:06,474 p=11070 u=root |  ok: [Linux1]
+2019-06-02 21:29:06,545 p=11070 u=root |  TASK [Download Ansible for RedHat] *******************************************************************************************************
+2019-06-02 21:29:07,828 p=11070 u=root |  ok: [Linux1]
+2019-06-02 21:29:07,897 p=11070 u=root |  TASK [Download Ansible for ubuntu] *******************************************************************************************************
+2019-06-02 21:29:07,923 p=11070 u=root |  skipping: [Linux1]
+2019-06-02 21:29:07,926 p=11070 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-06-02 21:29:07,927 p=11070 u=root |  Linux1                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-06-02 21:39:16,049 p=11180 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 21:39:16,067 p=11180 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 21:39:19,068 p=11180 u=root |  ok: [Linux1]
+2019-06-02 21:39:19,144 p=11180 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:39:29,791 p=11180 u=root |  changed: [Linux1]
+2019-06-02 21:39:29,860 p=11180 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:39:40,409 p=11180 u=root |  changed: [Linux1]
+2019-06-02 21:39:40,478 p=11180 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 21:39:59,551 p=11180 u=root |  changed: [Linux1]
+2019-06-02 21:39:59,620 p=11180 u=root |  TASK [Download Ansible for ubuntu] ******************************************************************************************************************************************
+2019-06-02 21:39:59,646 p=11180 u=root |  skipping: [Linux1]
+2019-06-02 21:39:59,649 p=11180 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 21:39:59,649 p=11180 u=root |  Linux1                     : ok=4    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-06-02 21:46:22,643 p=11290 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 21:46:22,662 p=11290 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 21:46:25,636 p=11290 u=root |  ok: [Linux1]
+2019-06-02 21:46:25,707 p=11290 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:46:27,000 p=11290 u=root |  ok: [Linux1]
+2019-06-02 21:46:27,070 p=11290 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:46:27,685 p=11290 u=root |  ok: [Linux1]
+2019-06-02 21:46:27,762 p=11290 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 21:46:28,419 p=11290 u=root |  ok: [Linux1]
+2019-06-02 21:46:28,489 p=11290 u=root |  TASK [Download Mongodb(162) 3.4.1 for Ubuntu] *******************************************************************************************************************************
+2019-06-02 21:46:28,515 p=11290 u=root |  skipping: [Linux1]
+2019-06-02 21:46:28,585 p=11290 u=root |  TASK [Download Mongodb(170) 3.4.1 for Ubuntu] *******************************************************************************************************************************
+2019-06-02 21:46:28,610 p=11290 u=root |  skipping: [Linux1]
+2019-06-02 21:46:28,679 p=11290 u=root |  TASK [Download Mongodb(155) 3.2.11 for Ubuntu] ******************************************************************************************************************************
+2019-06-02 21:46:28,705 p=11290 u=root |  skipping: [Linux1]
+2019-06-02 21:46:28,708 p=11290 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 21:46:28,709 p=11290 u=root |  Linux1                     : ok=4    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2019-06-02 21:52:38,825 p=11387 u=root |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 50, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   - block:   # ======Block for Debian======
+   ^ here
+
+2019-06-02 21:53:06,546 p=11396 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 21:53:06,565 p=11396 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 21:53:09,606 p=11396 u=root |  ok: [Linux1]
+2019-06-02 21:53:09,677 p=11396 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:53:20,286 p=11396 u=root |  changed: [Linux1]
+2019-06-02 21:53:20,357 p=11396 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:53:32,342 p=11396 u=root |  changed: [Linux1]
+2019-06-02 21:53:32,413 p=11396 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 21:53:42,469 p=11396 u=root |  changed: [Linux1]
+2019-06-02 21:53:42,538 p=11396 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 21:53:42,564 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:42,634 p=11396 u=root |  TASK [Download Mongodb 4.1.12 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 21:53:42,659 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:42,728 p=11396 u=root |  TASK [Download Mongodb 4.1.13 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 21:53:42,755 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:42,824 p=11396 u=root |  TASK [Download Mongodb 4.0.10 for Debian] ***********************************************************************************************************************************
+2019-06-02 21:53:42,850 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:42,920 p=11396 u=root |  TASK [Download Mongodb(170) 4.1.12 for Debian] ******************************************************************************************************************************
+2019-06-02 21:53:42,946 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:43,015 p=11396 u=root |  TASK [Download Mongodb(155) 4.1.13 for Debian] ******************************************************************************************************************************
+2019-06-02 21:53:43,041 p=11396 u=root |  skipping: [Linux1]
+2019-06-02 21:53:43,045 p=11396 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 21:53:43,045 p=11396 u=root |  Linux1                     : ok=4    changed=3    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2019-06-02 21:58:33,651 p=11496 u=root |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/root/cm/ansible/day-4/mongodb.yml': line 28, column 20, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      - name: Extract archive
+          unarchive:
+                   ^ here
+
+2019-06-02 21:58:56,122 p=11505 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 21:58:56,141 p=11505 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 21:58:59,152 p=11505 u=root |  ok: [Linux1]
+2019-06-02 21:58:59,222 p=11505 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 21:59:00,547 p=11505 u=root |  fatal: [Linux1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (get_url) module: create Supported parameters include: attributes, backup, checksum, client_cert, client_key, content, delimiter, dest, directory_mode, follow, force, force_basic_auth, group, headers, http_agent, mode, owner, regexp, remote_src, selevel, serole, setype, seuser, sha256sum, src, timeout, tmp_dest, unsafe_writes, url, url_password, url_username, use_proxy, validate_certs"}
+2019-06-02 21:59:00,548 p=11505 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 21:59:00,549 p=11505 u=root |  Linux1                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-02 22:01:23,562 p=11590 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 22:01:23,587 p=11590 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 22:01:26,589 p=11590 u=root |  ok: [Linux1]
+2019-06-02 22:01:26,666 p=11590 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:01:27,945 p=11590 u=root |  ok: [Linux1]
+2019-06-02 22:01:28,014 p=11590 u=root |  TASK [Create directory] *****************************************************************************************************************************************************
+2019-06-02 22:01:29,344 p=11590 u=root |  changed: [Linux1]
+2019-06-02 22:01:29,482 p=11590 u=root |  TASK [Extract archive] ******************************************************************************************************************************************************
+2019-06-02 22:01:47,994 p=11590 u=root |  changed: [Linux1]
+2019-06-02 22:01:48,072 p=11590 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:01:49,589 p=11590 u=root |  ok: [Linux1]
+2019-06-02 22:01:49,661 p=11590 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 22:01:50,331 p=11590 u=root |  ok: [Linux1]
+2019-06-02 22:01:50,401 p=11590 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:01:50,427 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,498 p=11590 u=root |  TASK [Download Mongodb 4.1.12 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:01:50,523 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,594 p=11590 u=root |  TASK [Download Mongodb 4.1.13 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:01:50,620 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,689 p=11590 u=root |  TASK [Download Mongodb 4.0.10 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:01:50,716 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,786 p=11590 u=root |  TASK [Download Mongodb(170) 4.1.12 for Debian] ******************************************************************************************************************************
+2019-06-02 22:01:50,811 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,880 p=11590 u=root |  TASK [Download Mongodb(155) 4.1.13 for Debian] ******************************************************************************************************************************
+2019-06-02 22:01:50,910 p=11590 u=root |  skipping: [Linux1]
+2019-06-02 22:01:50,913 p=11590 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 22:01:50,914 p=11590 u=root |  Linux1                     : ok=6    changed=2    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2019-06-02 22:09:56,717 p=11725 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 22:09:56,736 p=11725 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 22:10:00,741 p=11725 u=root |  ok: [Linux1]
+2019-06-02 22:10:00,812 p=11725 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:10:11,847 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:10:11,971 p=11725 u=root |  TASK [Create directory mongodb_162-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:10:14,018 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:10:14,140 p=11725 u=root |  TASK [Extract archive mongodb_162-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:10:32,477 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:10:32,602 p=11725 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:10:49,036 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:10:49,158 p=11725 u=root |  TASK [Create directory mongodb_170-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:10:50,081 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:10:50,203 p=11725 u=root |  TASK [Extract archive mongodb_170-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:11:06,555 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:11:06,678 p=11725 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 22:11:18,080 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:11:18,202 p=11725 u=root |  TASK [Create directory mongodb-3.2.11] **************************************************************************************************************************************
+2019-06-02 22:11:19,092 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:11:19,218 p=11725 u=root |  TASK [Extract archive mongodb-3.2.11] ***************************************************************************************************************************************
+2019-06-02 22:11:37,850 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:11:37,976 p=11725 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:11:38,045 p=11725 u=root |  skipping: [Linux1]
+2019-06-02 22:11:38,178 p=11725 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:11:39,114 p=11725 u=root |  changed: [Linux1]
+2019-06-02 22:11:39,237 p=11725 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:11:40,093 p=11725 u=root |  fatal: [Linux1]: FAILED! => {"changed": false, "msg": "dest '/opt/mongodb-4.0.11' must be an existing dir"}
+2019-06-02 22:11:40,106 p=11725 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 22:11:40,106 p=11725 u=root |  Linux1                     : ok=11   changed=10   unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2019-06-02 22:13:04,661 p=12072 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 22:13:04,681 p=12072 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 22:13:08,361 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:08,432 p=12072 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:13:09,705 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:09,775 p=12072 u=root |  TASK [Create directory mongodb_162-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:13:10,899 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:10,967 p=12072 u=root |  TASK [Extract archive mongodb_162-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:13:23,171 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:23,239 p=12072 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:13:23,864 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:23,932 p=12072 u=root |  TASK [Create directory mongodb_170-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:13:24,479 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:24,552 p=12072 u=root |  TASK [Extract archive mongodb_170-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:13:35,778 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:35,859 p=12072 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 22:13:37,264 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:37,333 p=12072 u=root |  TASK [Create directory mongodb-3.2.11] **************************************************************************************************************************************
+2019-06-02 22:13:37,879 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:37,951 p=12072 u=root |  TASK [Extract archive mongodb-3.2.11] ***************************************************************************************************************************************
+2019-06-02 22:13:52,103 p=12072 u=root |  ok: [Linux1]
+2019-06-02 22:13:52,176 p=12072 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:13:52,201 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,271 p=12072 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:13:52,297 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,366 p=12072 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:13:52,394 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,466 p=12072 u=root |  TASK [Download Mongodb 4.1.12 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:13:52,491 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,562 p=12072 u=root |  TASK [Download Mongodb 4.1.13 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:13:52,588 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,660 p=12072 u=root |  TASK [Download Mongodb 4.0.10 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:13:52,689 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,759 p=12072 u=root |  TASK [Download Mongodb(170) 4.1.12 for Debian] ******************************************************************************************************************************
+2019-06-02 22:13:52,785 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,854 p=12072 u=root |  TASK [Download Mongodb(155) 4.1.13 for Debian] ******************************************************************************************************************************
+2019-06-02 22:13:52,879 p=12072 u=root |  skipping: [Linux1]
+2019-06-02 22:13:52,886 p=12072 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 22:13:52,887 p=12072 u=root |  Linux1                     : ok=10   changed=0    unreachable=0    failed=0    skipped=8    rescued=0    ignored=0   
+2019-06-02 22:24:11,168 p=12393 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 22:24:11,188 p=12393 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 22:24:15,311 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:15,381 p=12393 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:24:16,783 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:16,857 p=12393 u=root |  TASK [Create directory mongodb_162-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:24:17,986 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:18,057 p=12393 u=root |  TASK [Extract archive mongodb_162-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:24:30,597 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:30,667 p=12393 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:24:31,328 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:31,403 p=12393 u=root |  TASK [Create directory mongodb_170-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:24:31,949 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:32,017 p=12393 u=root |  TASK [Extract archive mongodb_170-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:24:43,162 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:43,249 p=12393 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 22:24:43,907 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:43,976 p=12393 u=root |  TASK [Create directory mongodb-3.2.11] **************************************************************************************************************************************
+2019-06-02 22:24:44,567 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:44,643 p=12393 u=root |  TASK [Extract archive mongodb-3.2.11] ***************************************************************************************************************************************
+2019-06-02 22:24:56,404 p=12393 u=root |  ok: [Linux1]
+2019-06-02 22:24:56,496 p=12393 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:24:56,522 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:56,592 p=12393 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:24:56,619 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:56,692 p=12393 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:24:56,719 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:56,789 p=12393 u=root |  TASK [Download Mongodb 4.1.12 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:24:56,815 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:56,884 p=12393 u=root |  TASK [Create directory mongodb-4.1.12] **************************************************************************************************************************************
+2019-06-02 22:24:56,910 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:56,980 p=12393 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:24:57,006 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,077 p=12393 u=root |  TASK [Download Mongodb 4.1.13 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:24:57,103 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,172 p=12393 u=root |  TASK [Create directory mongodb-4.1.13] **************************************************************************************************************************************
+2019-06-02 22:24:57,198 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,268 p=12393 u=root |  TASK [Extract archive mongodb-4.1.13] ***************************************************************************************************************************************
+2019-06-02 22:24:57,295 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,365 p=12393 u=root |  TASK [Download Mongodb 4.0.10 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:24:57,391 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,462 p=12393 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:24:57,488 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,557 p=12393 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:24:57,584 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,654 p=12393 u=root |  TASK [Download Mongodb 4.1.12 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:24:57,679 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,749 p=12393 u=root |  TASK [Create directory mongodb-4.1.12] **************************************************************************************************************************************
+2019-06-02 22:24:57,773 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,845 p=12393 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:24:57,871 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:57,942 p=12393 u=root |  TASK [Download Mongodb(155) 4.1.13 for Debian] ******************************************************************************************************************************
+2019-06-02 22:24:57,968 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:58,037 p=12393 u=root |  TASK [Create directory mongodb-4.1.13] **************************************************************************************************************************************
+2019-06-02 22:24:58,063 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:58,133 p=12393 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:24:58,160 p=12393 u=root |  skipping: [Linux1]
+2019-06-02 22:24:58,163 p=12393 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 22:24:58,163 p=12393 u=root |  Linux1                     : ok=10   changed=0    unreachable=0    failed=0    skipped=18   rescued=0    ignored=0   
+2019-06-02 22:30:26,237 p=13000 u=root |  PLAY [Connect to my server] *************************************************************************************************************************************************
+2019-06-02 22:30:26,257 p=13000 u=root |  TASK [Gathering Facts] ******************************************************************************************************************************************************
+2019-06-02 22:30:30,046 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:30,134 p=13000 u=root |  TASK [Check and Print LINUX Version] ****************************************************************************************************************************************
+2019-06-02 22:30:30,163 p=13000 u=root |  ok: [Linux1] => {
+    "ansible_os_family": "RedHat"
+}
+2019-06-02 22:30:30,233 p=13000 u=root |  TASK [Download Mongodb(162) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:30:31,578 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:31,649 p=13000 u=root |  TASK [Create directory mongodb_162-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:30:32,794 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:32,863 p=13000 u=root |  TASK [Extract archive mongodb_162-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:30:44,899 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:44,977 p=13000 u=root |  TASK [Download Mongodb(170) 3.4.1 for RedHat] *******************************************************************************************************************************
+2019-06-02 22:30:46,194 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:46,278 p=13000 u=root |  TASK [Create directory mongodb_170-3.4.1] ***********************************************************************************************************************************
+2019-06-02 22:30:46,848 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:46,919 p=13000 u=root |  TASK [Extract archive mongodb_170-3.4.1] ************************************************************************************************************************************
+2019-06-02 22:30:57,941 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:58,063 p=13000 u=root |  TASK [Download Mongodb(155) 3.2.11 for RedHat] ******************************************************************************************************************************
+2019-06-02 22:30:59,377 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:30:59,451 p=13000 u=root |  TASK [Create directory mongodb-3.2.11] **************************************************************************************************************************************
+2019-06-02 22:31:00,005 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:31:00,086 p=13000 u=root |  TASK [Extract archive mongodb-3.2.11] ***************************************************************************************************************************************
+2019-06-02 22:31:11,719 p=13000 u=root |  ok: [Linux1]
+2019-06-02 22:31:11,788 p=13000 u=root |  TASK [Download Mongodb 4.0.10 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:31:11,814 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:11,883 p=13000 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:31:11,909 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:11,981 p=13000 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:31:12,007 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,076 p=13000 u=root |  TASK [Download Mongodb 4.1.12 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:31:12,102 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,172 p=13000 u=root |  TASK [Create directory mongodb-4.1.12] **************************************************************************************************************************************
+2019-06-02 22:31:12,198 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,268 p=13000 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:31:12,293 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,362 p=13000 u=root |  TASK [Download Mongodb 4.1.13 for Ubuntu] ***********************************************************************************************************************************
+2019-06-02 22:31:12,388 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,459 p=13000 u=root |  TASK [Create directory mongodb-4.1.13] **************************************************************************************************************************************
+2019-06-02 22:31:12,485 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,555 p=13000 u=root |  TASK [Extract archive mongodb-4.1.13] ***************************************************************************************************************************************
+2019-06-02 22:31:12,580 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,650 p=13000 u=root |  TASK [Download Mongodb 4.0.10 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:31:12,676 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,745 p=13000 u=root |  TASK [Create directory mongodb-4.0.10] **************************************************************************************************************************************
+2019-06-02 22:31:12,772 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,842 p=13000 u=root |  TASK [Extract archive mongodb-4.0.10] ***************************************************************************************************************************************
+2019-06-02 22:31:12,865 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:12,937 p=13000 u=root |  TASK [Download Mongodb 4.1.12 for Debian] ***********************************************************************************************************************************
+2019-06-02 22:31:12,963 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,033 p=13000 u=root |  TASK [Create directory mongodb-4.1.12] **************************************************************************************************************************************
+2019-06-02 22:31:13,061 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,131 p=13000 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:31:13,156 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,226 p=13000 u=root |  TASK [Download Mongodb(155) 4.1.13 for Debian] ******************************************************************************************************************************
+2019-06-02 22:31:13,251 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,320 p=13000 u=root |  TASK [Create directory mongodb-4.1.13] **************************************************************************************************************************************
+2019-06-02 22:31:13,346 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,416 p=13000 u=root |  TASK [Extract archive mongodb-4.1.12] ***************************************************************************************************************************************
+2019-06-02 22:31:13,442 p=13000 u=root |  skipping: [Linux1]
+2019-06-02 22:31:13,445 p=13000 u=root |  PLAY RECAP ******************************************************************************************************************************************************************
+2019-06-02 22:31:13,446 p=13000 u=root |  Linux1                     : ok=11   changed=0    unreachable=0    failed=0    skipped=18   rescued=0    ignored=0   
