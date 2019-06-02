@@ -3,23 +3,6 @@
   hosts: Linux1
   become: yes
 
-  vars:
-    mongo_src:
-    - mongodb-linux-x86_64-rhel62-3.4.1
-    - mongodb-linux-x86_64-rhel70-3.4.1
-    - mongodb-linux-x86_64-rhel55-3.2.11
-
-    - mongodb-linux-x86_64-ubuntu1604-4.0.10
-    - mongodb-linux-x86_64-ubuntu1804-4.1.12
-    - mongodb-linux-x86_64-ubuntu1804-4.1.13
-
-    - mongodb-linux-x86_64-debian92-4.0.10
-    - mongodb-linux-x86_64-debian92-4.1.12
-    - mongodb-linux-x86_64-debian92-4.1.13
-
-
-
-
   tasks:
   - name: Check and Print LINUX Version
     debug: var=ansible_os_family
